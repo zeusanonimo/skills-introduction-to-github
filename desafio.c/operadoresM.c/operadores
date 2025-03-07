@@ -1,0 +1,25 @@
+#include <stdio>
+
+int main()
+{
+    /*Soma(+)
+    Subtração(-)
+    Multiplicação(*)
+    Divisão(/) */
+
+    int numero1, numero2;
+    int soma, subtracao, multiplicacao, divisao;
+
+    soma = numero1 + numero2;
+    subtracao = numero1 - numero2;
+    multiplicacao = numero1 * numero2;
+    divisao = numero1 / numero2;
+
+
+    Printf("soma numero1 + numero2");
+    scanf("soma %d\n")
+
+
+
+    return 0;
+}
