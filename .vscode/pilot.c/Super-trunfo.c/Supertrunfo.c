@@ -91,8 +91,8 @@ int main(){
     pibporcapital2 = pib2 *1000000000/ populacao2;
     printf("PIB por Capital 2: R$ %.2f\n", pibporcapital2);
 
-    densidade_invertida2 = area2 *10000000/ populacao2;
-    printf("Densidade Populacional Invertida %.3f habitantes/Km²\n", densidade_invertida2);
+    densidade_invertida2 = area2 *100/ populacao2;
+    printf("Densidade Populacional Invertida %.6f habitantes/Km²\n", densidade_invertida2);
 
     superpoder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + pibporcapital2 + densidade_invertida2;
     printf("Super Poder: %f\n", superpoder2);
@@ -100,34 +100,41 @@ int main(){
     printf("\nComparando as Cartas\n");
     
     // Comparando valores
-    int comp_populacao1_maior = populacao1 > populacao2;
-    int comp_populacao1_menor = populacao1 < populacao2;
-    int comp_area1_maior = area1 > area2;
-    int comp_area1_menor = area1 < area2;
-    int comp_pib1_maior = pib1 > pib2;
-    int comp_pib1_menor = pib1 < pib2;
-    int comp_pontos_turisticos1_maior = pontosTuristicos1 > pontosTuristicos2;
-    int comp_pontos_turisticos1_menor = pontosTuristicos1 < pontosTuristicos2;
-    int comp_densidade_invertida1_maior = densidade_invertida1 > densidade_invertida2;
-    int comp_densidade_invertida1_menor = densidade_invertida1 < densidade_invertida2;
+    int comp_populacao_maior = populacao1 > populacao2;
+    int comp_populacao_menor = populacao1 < populacao2;
+    int comp_area_maior = area1 > area2;
+    int comp_area_menor = area1 < area2;
+    int comp_pib_maior = pib1 > pib2;
+    int comp_pib_menor = pib1 < pib2;
+    int comp_pontos_turisticos_maior = pontosTuristicos1 > pontosTuristicos2;
+    int comp_pontos_turisticos_menor = pontosTuristicos1 < pontosTuristicos2;
+    int comp_densidade_invertida_maior = densidade_invertida1 > densidade_invertida2;
+    int comp_densidade_invertida_menor = densidade_invertida1 < densidade_invertida2;
+    int comp_superpoder_maior = superpoder1 > superpoder2;
+    int comp_superpoder_menor = superpoder1 < superpoder2;
 
-    printf("População 1(%u): é maior que População 2(%u):\n", populacao1, populacao2,comp_populacao1_maior);
+
+    printf("População 1 é maior que População 2: %u\n", comp_populacao_maior);
     
-    printf("População 1(%u): é menor que População 2(%u):\n", populacao1, populacao2,comp_populacao1_menor);
+    printf("População 1 é menor que População 2: %u\n", comp_populacao_menor);
     
 
-    printf("Área 1 (%.3f) é maior que Área 2 (%.3f)\n", area1, area2,comp_area1_maior);
-    printf("Área 1 (%.3f) é menor que Área 2 (%.3f)\n", area1, area2,comp_area1_menor);
+    printf("Área 1 é maior que Área 2: %6d\n", comp_area_maior);
+    printf("Área 1 é menor que Área 2: %6d\n", comp_area_menor);
         
-    printf("PIB 1 (%.3f) é maior que PIB 2 (%.3f)\n", pib1, pib2,comp_pib1_maior);
-    printf("PIB 1 (%.3f) é menor que PIB 2 (%.3f)\n", pib1, pib2,comp_area1_menor);
+    printf("PIB 1 é maior que PIB 2: %6d\n", comp_pib_maior);
+    printf("PIB 1 é menor que PIB 2: %6d\n", comp_pib_menor);
 
-    printf("Pontos Turísticos 1 (%d) é maiores que Pontos Turísticos 2 (%d)\n", pontosTuristicos1, comp_pontos_turisticos1_maior);
-    printf("Pontos Turísticos 1 (%d) é menor que Pontos Turísticos 2 (%d)\n", pontosTuristicos1, comp_pontos_turisticos1_menor);
+    printf("Pontos Turísticos 1 é maiores que Pontos Turísticos 2: %d\n", comp_pontos_turisticos_maior);
+    printf("Pontos Turísticos 1 é menor que Pontos Turísticos 2: %d\n", comp_pontos_turisticos_menor);
 
 
-    printf("Densidade Populacional Invertida 1 (%.6f) é maior que Densidade Populacional Invertida 2 (%.6f)\n", densidade_invertida1, densidade_invertida2, comp_densidade_invertida1_maior);
-    printf("Densidade Populacional Invertida 1 (%.6f) é menor que Densidade Populacional Invertida 2 (%.6f)\n", densidade_invertida1, densidade_invertida2, comp_area1_menor);
+    printf("Densidade Populacional Invertida 1 é maior que Densidade Populacional Invertida 2: %d\n", comp_densidade_invertida_maior);
+    printf("Densidade Populacional Invertida 1 é menor que Densidade Populacional Invertida 2: %d\n", comp_densidade_invertida_menor);
+
+    printf("Superpoder 1 é maior que Superpoder 2: %d\n", comp_superpoder_maior);
+    printf("Superpoder 1 é menor que Superpoder 2: %d\n", comp_superpoder_menor);
+
 
 
 
