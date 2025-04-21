@@ -98,46 +98,44 @@ int main(){
     printf("Super Poder: %f\n", superpoder2);
 
     printf("\nComparando as Cartas\n");
-    
-    // Comparando valores
-    int comp_populacao_maior = populacao1 > populacao2;
-    int comp_populacao_menor = populacao1 < populacao2;
-    int comp_area_maior = area1 > area2;
-    int comp_area_menor = area1 < area2;
-    int comp_pib_maior = pib1 > pib2;
-    int comp_pib_menor = pib1 < pib2;
-    int comp_pontos_turisticos_maior = pontosTuristicos1 > pontosTuristicos2;
-    int comp_pontos_turisticos_menor = pontosTuristicos1 < pontosTuristicos2;
-    int comp_densidade_invertida_maior = densidade_invertida1 > densidade_invertida2;
-    int comp_densidade_invertida_menor = densidade_invertida1 < densidade_invertida2;
-    int comp_superpoder_maior = superpoder1 > superpoder2;
-    int comp_superpoder_menor = superpoder1 < superpoder2;
 
 
-    printf("População 1 é maior que População 2: %u\n", comp_populacao_maior);
-    
-    printf("População 1 é menor que População 2: %u\n", comp_populacao_menor);
-    
+    if (populacao1 > populacao2) {
+        printf("População 1 (%u habitantes) é maior que População 2 (%u habitantes).\n", populacao1, populacao2);
+    } else if (populacao1 < populacao2) {
+        printf("População 1 (%u habitantes) é menor que População 2 (%u habitantes).\n", populacao1, populacao2);
+    } else {
+        printf("Ambas as cidades têm a mesma população (%u habitantes).\n", populacao1);
+    }
 
-    printf("Área 1 é maior que Área 2: %6d\n", comp_area_maior);
-    printf("Área 1 é menor que Área 2: %6d\n", comp_area_menor);
-        
-    printf("PIB 1 é maior que PIB 2: %6d\n", comp_pib_maior);
-    printf("PIB 1 é menor que PIB 2: %6d\n", comp_pib_menor);
+    if (area1 > area2) {
+        printf("Área 1 (%.2f Km²) é maior que Área 2 (%.2f Km²).\n", area1, area2);
+    } else if (area1 < area2) {
+        printf("Área 1 (%.2f Km²) é menor que Área 2 (%.2f Km²).\n", area1, area2);
+    } else {
+        printf("Ambas as cidades têm a mesma área (%.2f Km²).\n", area1);
+    }
 
-    printf("Pontos Turísticos 1 é maiores que Pontos Turísticos 2: %d\n", comp_pontos_turisticos_maior);
-    printf("Pontos Turísticos 1 é menor que Pontos Turísticos 2: %d\n", comp_pontos_turisticos_menor);
+    if (superpoder1 > superpoder2) {
+        printf("Superpoder da Carta 1 é maior que o da Carta 2.\n");
+    } else if (superpoder1 < superpoder2) {
+        printf("Superpoder da Carta 1 é menor que o da Carta 2.\n");
+    } else {
+        printf("As duas cartas têm o mesmo nível de Superpoder.\n");
+    }
 
+    // Decisão baseada nos pontos turísticos
+    if (pontosTuristicos1 >= 30) {
+        printf("Carta 1 tem muitos pontos turísticos (%.d).\n", pontosTuristicos1);
+    } else {
+        printf("Carta 1 tem menos pontos turísticos.\n");
+    }
 
-    printf("Densidade Populacional Invertida 1 é maior que Densidade Populacional Invertida 2: %d\n", comp_densidade_invertida_maior);
-    printf("Densidade Populacional Invertida 1 é menor que Densidade Populacional Invertida 2: %d\n", comp_densidade_invertida_menor);
+    if (pontosTuristicos2 >= 30) {
+        printf("Carta 2 tem muitos pontos turísticos (%.d).\n", pontosTuristicos2);
+    } else {
+        printf("Carta 2 tem menos pontos turísticos.\n");
+    }
 
-    printf("Superpoder 1 é maior que Superpoder 2: %d\n", comp_superpoder_maior);
-    printf("Superpoder 1 é menor que Superpoder 2: %d\n", comp_superpoder_menor);
-
-
-
-
-    
     return 0;
 }
