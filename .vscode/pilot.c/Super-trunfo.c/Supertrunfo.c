@@ -97,44 +97,59 @@ int main(){
     superpoder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + pibporcapital2 + densidade_invertida2;
     printf("Super Poder: %f\n", superpoder2);
 
-    printf("\nComparando as Cartas\n");
 
+    // Comparações usando switch
+    printf("\nComparações entre as Cartas:\n");
 
-    if (populacao1 > populacao2) {
-        printf("População 1 (%u habitantes) é maior que População 2 (%u habitantes).\n", populacao1, populacao2);
-    } else if (populacao1 < populacao2) {
-        printf("População 1 (%u habitantes) é menor que População 2 (%u habitantes).\n", populacao1, populacao2);
-    } else {
-        printf("Ambas as cidades têm a mesma população (%u habitantes).\n", populacao1);
-    }
+    int opcao; // Opção para definir o tipo de comparação
+    printf("Escolha uma comparação:\n");
+    printf("1 - População\n2 - Área\n3 - Pontos Turísticos\n4 - Super Poder\n");
+    scanf("%d", &opcao);
 
-    if (area1 > area2) {
-        printf("Área 1 (%.2f Km²) é maior que Área 2 (%.2f Km²).\n", area1, area2);
-    } else if (area1 < area2) {
-        printf("Área 1 (%.2f Km²) é menor que Área 2 (%.2f Km²).\n", area1, area2);
-    } else {
-        printf("Ambas as cidades têm a mesma área (%.2f Km²).\n", area1);
-    }
+    switch (opcao) {
+        case 1: // Comparação de população
+            if (populacao1 > populacao2) {
+                printf("População 1 (%u habitantes) é maior que População 2 (%u habitantes).\n", populacao1, populacao2);
+            } else if (populacao1 < populacao2) {
+                printf("População 1 (%u habitantes) é menor que População 2 (%u habitantes).\n", populacao1, populacao2);
+            } else {
+                printf("Ambas as cidades têm a mesma população (%u habitantes).\n", populacao1);
+            }
+            break;
 
-    if (superpoder1 > superpoder2) {
-        printf("Superpoder da Carta 1 é maior que o da Carta 2.\n");
-    } else if (superpoder1 < superpoder2) {
-        printf("Superpoder da Carta 1 é menor que o da Carta 2.\n");
-    } else {
-        printf("As duas cartas têm o mesmo nível de Superpoder.\n");
-    }
+        case 2: // Comparação de área
+            if (area1 > area2) {
+                printf("Área 1 (%.2f Km²) é maior que Área 2 (%.2f Km²).\n", area1, area2);
+            } else if (area1 < area2) {
+                printf("Área 1 (%.2f Km²) é menor que Área 2 (%.2f Km²).\n", area1, area2);
+            } else {
+                printf("Ambas as cidades têm a mesma área (%.2f Km²).\n", area1);
+            }
+            break;
 
-    // Decisão baseada nos pontos turísticos
-    if (pontosTuristicos1 >= 30) {
-        printf("Carta 1 tem muitos pontos turísticos (%.d).\n", pontosTuristicos1);
-    } else {
-        printf("Carta 1 tem menos pontos turísticos.\n");
-    }
+        case 3: // Comparação de pontos turísticos
+            if (pontosTuristicos1 > pontosTuristicos2) {
+                printf("Carta 1 tem mais pontos turísticos (%d) que Carta 2 (%d).\n", pontosTuristicos1, pontosTuristicos2);
+            } else if (pontosTuristicos1 < pontosTuristicos2) {
+                printf("Carta 1 tem menos pontos turísticos (%d) que Carta 2 (%d).\n", pontosTuristicos1, pontosTuristicos2);
+            } else {
+                printf("Ambas as cartas têm o mesmo número de pontos turísticos (%d).\n", pontosTuristicos1);
+            }
+            break;
 
-    if (pontosTuristicos2 >= 30) {
-        printf("Carta 2 tem muitos pontos turísticos (%.d).\n", pontosTuristicos2);
-    } else {
-        printf("Carta 2 tem menos pontos turísticos.\n");
+        case 4: // Comparação de super poder
+            if (superpoder1 > superpoder2) {
+                printf("Super Poder da Carta 1 (%.2f) é maior que o da Carta 2 (%.2f).\n", superpoder1, superpoder2);
+            } else if (superpoder1 < superpoder2) {
+                printf("Super Poder da Carta 1 (%.2f) é menor que o da Carta 2 (%.2f).\n", superpoder1, superpoder2);
+            } else {
+                printf("Ambas as cartas têm o mesmo Super Poder (%.2f).\n", superpoder1);
+            }
+            break;
+
+        default: // Caso a opção seja inválida
+            printf("Opção inválida. Por favor, escolha entre 1 e 4.\n");
+            break;
     }
 
     return 0;
