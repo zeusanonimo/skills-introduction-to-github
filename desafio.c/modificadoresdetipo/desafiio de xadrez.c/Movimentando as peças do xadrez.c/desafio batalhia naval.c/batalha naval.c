@@ -14,15 +14,27 @@ void inicializarTabuleiro(int tabuleiro[TAMANHO][TAMANHO]) {
 
 void posicionarNavios(int tabuleiro[TAMANHO][TAMANHO]) {
     // Posiciona um navio horizontalmente
-    int linha_horizontal = 2, coluna_horizontal = 4;  // Coordenadas iniciais
+    int linha_horizontal = 2, coluna_horizontal = 4;  
     for(int i = 0; i < 3; i++) {
-        tabuleiro[linha_horizontal][coluna_horizontal + i] = NAVIO;  // Navio na horizontal
+        tabuleiro[linha_horizontal][coluna_horizontal + i] = NAVIO;
     }
 
     // Posiciona um navio verticalmente
-    int linha_vertical = 6, coluna_vertical = 7;  // Coordenadas iniciais
+    int linha_vertical = 6, coluna_vertical = 7;  
     for(int i = 0; i < 3; i++) {
-        tabuleiro[linha_vertical + i][coluna_vertical] = NAVIO;  // Navio na vertical
+        tabuleiro[linha_vertical + i][coluna_vertical] = NAVIO;
+    }
+
+    // Posiciona um navio diagonal crescente (\)
+    int linha_diagonal1 = 1, coluna_diagonal1 = 1;
+    for(int i = 0; i < 3; i++) {
+        tabuleiro[linha_diagonal1 + i][coluna_diagonal1 + i] = NAVIO;
+    }
+
+    // Posiciona um navio diagonal decrescente (/)
+    int linha_diagonal2 = 5, coluna_diagonal2 = 8;
+    for(int i = 0; i < 3; i++) {
+        tabuleiro[linha_diagonal2 + i][coluna_diagonal2 - i] = NAVIO;
     }
 }
 
